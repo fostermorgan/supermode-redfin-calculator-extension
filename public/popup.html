@@ -1,0 +1,57 @@
+<head>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<html>
+  <body style="min-width: 300px;">
+    <h1 style="text-align: center;">Redfin Deal Calculator</h1>
+    <hr />
+    <div id="sign-in-button-container">
+      <div class="button-container">
+        <button id="google-signin-btn" class="button-container">Sign in with Google</button>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: flex-start;">
+      <div id="current-user" style="font-size: 15px; padding: 10px;"></div>
+    </div>
+
+    <div id="action-buttons" style="padding-top: 10px; padding-bottom: 10px;">
+      <div style="display: flex; justify-content: space-evenly">  
+        <button id="analyze-button" class="button">Analyze</button>
+        <button id="download-csv" class="button">Download CSV</button>
+      </div>
+    </div>
+
+    <div id="parse-content">
+      <div style="display: flex; justify-content: flex-start;">
+        <div style="font-weight: bold; font-size: 20px; padding-right: 5px;">Address: </div>
+        <div id="address" style="font-size: 20px;"></div>
+      </div>
+      <div style="display: flex; justify-content: flex-start;">
+        <div style="font-weight: bold;font-size: 20px; padding-right: 5px;">Price: </div>
+        <div id="price" style="font-size: 20px;"></div>
+      </div>
+      <div style="display: flex; justify-content: flex-start; padding-bottom: 10px;">
+        <div style="font-weight: bold;font-size: 20px; padding-right: 5px;">Taxes: </div>
+        <div id="taxes" style="font-size: 20px;"></div>
+      </div>
+      
+      
+      <div style="display: flex; justify-content: flex-start;">
+        <div style="font-weight: bold;" id="error-message"></div>
+      </div>    
+    </div>
+
+    <div id="sign-out-button-container">
+      <div class="button-container">
+        <button id="google-signout-btn">Sign Out</button>
+      </div>
+    </div>
+
+    <div id="scrape-container" >
+      <div style="font-weight: bold;">Scrape Count: </div>
+      <div id="scrape-count">0</div>
+    </div>
+  
+    <script src="popup.js"></script>
+  </body>
+</html>

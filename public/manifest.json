@@ -1,0 +1,39 @@
+{
+	"name": "Redfin Deal Calculator",
+	"description": "Scrape a redfin site for address, price, and tax information.",
+	"version": "1.0",
+	"manifest_version": 3,
+	"host_permissions": [
+		"https://apis.google.com/*", 
+		"https://www.googleapis.com/*", 
+		"https://accounts.google.com/gsi/client", 
+		"https://accounts.google.com/gsi/", 
+		"https://accounts.google.com/gsi/style"
+	],
+	"action": {
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"activeTab",
+		"scripting", 
+		"storage", 
+		"tabs",
+		"identity"
+	],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+		  "matches": ["<all_urls>"],
+		  "js": ["content.js"]
+		}
+	],
+	"oauth2": {
+		"client_id": "897603512305-32t8vkt3249cbctg2pb3lmslu9n29b98.apps.googleusercontent.com",
+		"scopes": [
+		  	"https://www.googleapis.com/auth/userinfo.email"
+		]
+	},
+	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhlmgXjaBwfP54oqeX7fg9uuFtNZCqwQeZQEnpkONQZ+F2rODWrN1UpF8RX64a3YVxWNaocYaLE00mXb0F3/jzz9DVrOhGsluTgkJUOKl3ArOLcjelXGjpFaFh9bLLmmYBhh8WnNyB9h63wgFVjVl5do8aZIS5HhuQADxJtYJ3zZ3hVQ2J6HppUxRFNU77lW414kPAl+mlD0NXHN7cxyPGk9h6dEzayjK/9T2CdlDbXL+LBvhwsbZ2woSR5oAlE2JVmpN79hDnDaBYyESloh/ZrDa3ACvr1p0nOKHSu3a/dp+etVXPUMvh41Kpjq835UDlOCfNGGITjVdFOdQagPLXwIDAQAB"
+}
