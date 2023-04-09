@@ -1,6 +1,7 @@
 # How to compile
 1. Install dependencies by running npm install
 2. Build application by running npm run build
+    - This will generate a dist folder that will be needed to import locally
 
 # How to run
 1. go to chrome://extensions in google chrome browser
